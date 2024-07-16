@@ -3,7 +3,7 @@ let history = createWebHashHistory(); //使用 createWebHistory() 建立 history
 let routes = [
     {
         path: "/",
-        redirect: "/func",
+        redirect: "/layout",
     },
     {
         path: "/login",
@@ -20,10 +20,10 @@ let routes = [
         },
     },
     {
-        path: "/func",
-        component: () => import("@/views/func.vue"),
+        path: "/max7219",
+        component: () => import("@/views/max7219.vue"),
         meta: {
-            title: "func",
+            title: "max7219",
         },
     },
     // {

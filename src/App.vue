@@ -2,20 +2,15 @@
 
   <!-- <HelloWorld msg="Vite + Vue" /> -->
   <router-view></router-view>
-  <button @click="pubData('max7219-mqtt1', '要傳送的訊息')">發送mqtt</button>
+  <!-- <button @click="pubData('max7219-mqtt1', '要傳送的訊息')">發送mqtt</button> -->
 </template>
 
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 import { ref, onMounted } from "vue";
 import { connectMQTT, pubData } from "@/utils/mqttt.js";
 
 
-
-// const pubData = () => {
-//   const topic = 'max7219-mqtt1';
-//   mqttClient.value.publish(topic, "要傳送的訊息");
-// }
 
 const a = (za) => {
   console.log(za);
