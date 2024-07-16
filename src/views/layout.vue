@@ -36,7 +36,7 @@ const infraredCtrl = ref(false);
 const motorCtrl = ref(false);
 
 const pushMqtt = () => {
-    pubData('max7219-setting', (infraredCtrl.value ? '1' : '0') + (motorCtrl.value ? '1' : '0'))
+    pubData('max7219-setting', (infraredCtrl.value ? '1' : '0') + (motorCtrl.value ? '1' : '0'));
 }
 
 </script>

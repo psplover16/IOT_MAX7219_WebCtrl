@@ -4,6 +4,7 @@
             <func :penMode="penMode" @getNoticeWord="getNoticeWord"></func>
         </div>
         <div class="btnGroup">
+            <input type="text" v-model="whichMQTT" placeholder="pub至哪個MQTT">
             <button @click="sendNoticeWord">send</button>
             <button @click="penMode = penMode == 1 ? 0 : 1">{{ penMode == 1 ? 'pen' : 'eraser' }}</button>
             <button @click="$router.push('/')">back</button>
@@ -16,12 +17,12 @@
 import { ref, reactive, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import func from '@/components/func.vue';
-
+import { pubData } from "@/utils/mqttt.js";
 const router = useRouter();
 defineProps({
     msg: String,
 })
-
+const whichMQTT = ref('max7219-mqtt1');
 const penMode = ref(1); // 1是筆 0是橡皮擦
 const noticeWord = ref();
 const getNoticeWord = (data) => {
@@ -62,9 +63,13 @@ const arrToWord = (arr) => {
     return result;
 }
 const sendNoticeWord = () => {
-    console.log(noticeWord.value)
-    console.log(arrayChange());
+    // console.log(noticeWord.value)
+    // console.log(arrayChange());
     console.log(arrToWord(arrayChange()));
+
+    
+    pubData(whichMQTT.value, arrToWord(arrayChange()));
+
     router.push('/');
 }
 

@@ -17,6 +17,7 @@ const a = (za) => {
 }
 onMounted(async () => {
   const data = await connectMQTT(a);
+  // ,['max7219-mqtt1','max7219-mqtt2','max7219-setting']
   // console.log(message.toString());
 });
 </script>
