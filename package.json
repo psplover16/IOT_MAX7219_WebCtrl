@@ -1,21 +1,23 @@
 {
   "name": "noticelight",
-  "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "private": true,
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
+    "dev": "vite",
     "preview": "vite preview"
   },
   "dependencies": {
     "mqtt": "^5.8.0",
     "pinia": "^2.1.7",
+    "register-service-worker": "^1.7.2",
     "vue": "^3.4.29",
     "vue-router": "^4.4.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
+    "@vue/cli-plugin-pwa": "~5.0.0",
     "vite": "^5.3.1"
-  }
+  },
+  "type": "module"
 }
