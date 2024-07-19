@@ -117,11 +117,22 @@ onMounted(() => {
 </script>
 
 <style scoped>
-table {
-    width: calc(100% / 8);
-    height: 50%;
-    background-color: blue;
-    border: 1px solid black;
+@media screen and (orientation: landscape) {
+    table {
+        width: calc(100% / 8);
+        height: 50%;
+        background-color: blue;
+        border: 1px solid black;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    table {
+        width: calc(100% / 2);
+        height: calc(100% / 8);
+        background-color: blue;
+        border: 1px solid black;
+    }
 }
 
 .read-the-docs {

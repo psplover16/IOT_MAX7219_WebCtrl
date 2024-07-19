@@ -67,7 +67,7 @@ const sendNoticeWord = () => {
     // console.log(arrayChange());
     console.log(arrToWord(arrayChange()));
 
-    
+
     pubData(whichMQTT.value, arrToWord(arrayChange()));
 
     router.push('/');
@@ -79,6 +79,13 @@ const sendNoticeWord = () => {
 <style scoped>
 @media screen and (orientation: landscape) {
     .max7219View {
+        max-width: 100vw;
+        max-height: calc(100vh - 30px);
+        background-color: red;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        flex-wrap: wrap;
         aspect-ratio: 4 / 1;
         margin-top: calc((100vh - 25vw)/2);
     }
@@ -86,7 +93,16 @@ const sendNoticeWord = () => {
 
 @media screen and (orientation: portrait) {
     .max7219View {
+        max-width: 100vw;
+        max-height: calc(100vh - 30px);
+        background-color: red;
+        margin-right: auto;
+        margin-left: auto;
+        flex-wrap: wrap;
         aspect-ratio: 1/4;
+        display: flex;
+        flex-direction: column-reverse;
+        transform: scale(-1);
     }
 }
 
@@ -95,15 +111,7 @@ const sendNoticeWord = () => {
     height: 100%;
 }
 
-.max7219View {
-    max-width: 100vw;
-    max-height: calc(100vh - 30px);
-    background-color: red;
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
-    flex-wrap: wrap;
-}
+
 
 .btnGroup {
     height: 30px;
