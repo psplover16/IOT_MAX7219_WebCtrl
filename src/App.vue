@@ -29,7 +29,10 @@ onMounted(async () => {
 
 
 
-<style scoped>
+<style>
+body{
+  overscroll-behavior: none;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
