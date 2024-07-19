@@ -31,7 +31,7 @@ onMounted(async () => {
 
 <style>
 body{
-  overscroll-behavior: none;
+  overscroll-behavior-y: contain;
 }
 .logo {
   height: 6em;
