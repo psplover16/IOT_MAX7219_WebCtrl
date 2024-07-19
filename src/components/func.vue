@@ -63,9 +63,9 @@ const handleTouchMove = () => {
     const element = document.elementFromPoint(x, y)
 
     // 处理滑过的元素
-    const col = element.getAttribute("data-col");
-    const row = element.getAttribute("data-row");
-    const num = element.getAttribute("data-tableNum");
+    const col = element?.getAttribute("data-col");
+    const row = element?.getAttribute("data-row");
+    const num = element?.getAttribute("data-tableNum");
     if (col) {
         changeWord(num - 1, row - 1, col - 1);
     }
@@ -80,9 +80,9 @@ const handleMouseMove = (event) => {
     const element = document.elementFromPoint(x, y);
 
     // 处理滑过的元素
-    const col = element.getAttribute("data-col");
-    const row = element.getAttribute("data-row");
-    const num = element.getAttribute("data-tableNum");
+    const col = element?.getAttribute("data-col");
+    const row = element?.getAttribute("data-row");
+    const num = element?.getAttribute("data-tableNum");
     if (col) {
         changeWord(num - 1, row - 1, col - 1);
     }

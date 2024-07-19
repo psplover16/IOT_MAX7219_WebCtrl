@@ -5,43 +5,15 @@
     <link rel="icon" type="image/svg+xml" href="./vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + Vue</title>
-    <script type="module" crossorigin src="./assets/index-CWEHxLDz.js"></script>
+    <script type="module" crossorigin src="./assets/index-B30mKQ1g.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-DH2z9yaU.css">
   <link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
   <body>
     <div id="app"></div>
     <script>
-      window.addEventListener('load', function() {
-
-var isWindowTop = false;
-var lastTouchY = 0;
-
-var touchStartHandler = function(e) {
-    if (e.touches.length !== 1) return;
-    lastTouchY = e.touches[0].clientY;
-    isWindowTop = (window.pageYOffset === 0);
-};
-
-var touchMoveHandler = function(e) {
-    var touchY = e.touches[0].clientY;
-    var touchYmove = touchY - lastTouchY;
-    lastTouchY = touchY;
-
-    if (isWindowTop) {
-        isWindowTop = false;
-        // 阻擋移動事件
-        if (touchYmove > 0) {
-            e.preventDefault();
-            return;
-        }
-    }
-
-};
-
-document.addEventListener('touchstart', touchStartHandler, false);
-document.addEventListener('touchmove', touchMoveHandler, false);
-
-});
+document.addEventListener('touchmove', function(e) {
+  e.preventDefault();
+}, { passive: false });
     </script>
   </body>
 </html>
